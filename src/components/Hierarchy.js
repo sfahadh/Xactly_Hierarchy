@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import hierarchyData from "../utils/hierarchyData.json";
 import Role from "./Role";
 import Position from "../model/Position";
+import moment from 'moment';
 
 export default function Hierarchy() {
+    const [timestamp, setTimestamp] = useState(moment().format("MMMM Do YYYY, h:mm:ss a"));
     const vpRole = new Position(hierarchyData.position, hierarchyData.status, null, hierarchyData.reportees);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            hierarchyData.reportees[0].status = "warning";
+            setTimestamp(moment().format("MMMM Do YYYY, h:mm:ss a"));
+          }, 5000);
+
+        return () => clearInterval(interval);
+    }, [timestamp])
     
     return (
         <div className="container mb-5">
@@ -33,6 +44,7 @@ export default function Hierarchy() {
                     </div>
                 )
             }) }
+            <h4 className="mt-3">{ timestamp }</h4>
         </div>
     )
 }
