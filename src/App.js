@@ -1,4 +1,6 @@
 import './App.css';
+import Hierarchy from './components/Hierarchy';
+
 
 function App() {
 	return (
@@ -6,6 +8,7 @@ function App() {
 			<header className="App-header">
 				<h1>Quarter Sales Performance</h1>
 			</header>
+			<Hierarchy />
 		</div>
 	);
 }
