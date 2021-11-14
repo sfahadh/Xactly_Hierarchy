@@ -1,0 +1,75 @@
+{
+    "position": "VP of Sales",
+    "status": "critical",
+    "reportees": [{
+        "position": "Sales Manager",
+        "region": "North America",
+        "status": "critical",
+        "reportees": [{
+            "position": "Sales Lead",
+            "country": "Canada",
+            "status": "normal",
+            "reportees": [{
+                "position": "Sales Representative",
+                "city": "Toronto",
+                "status": "normal"
+            },
+            {
+                "position": "Sales Representative",
+                "city": "Vancouver",
+                "status": "normal"
+            }]
+        }, 
+        {
+            "position": "Sales Lead",
+            "country": "USA",
+            "status": "critical",
+            "reportees": [{
+                "position": "Sales Representative",
+                "city": "New York",
+                "status": "warning"
+            },
+            {
+                "position": "Sales Representative",
+                "city": "Dallas",
+                "status": "critical"
+            },
+            {
+                "position": "Sales Representative",
+                "city": "Los Angeles",
+                "status": "critical"
+            }]
+        }]
+    },
+    {
+        "position": "Sales Manager",
+        "region": "Europe",
+        "status": "warning",
+        "reportees": [{
+            "position": "Sales Lead",
+            "country": "Germany",
+            "status": "warning",
+            "reportees": [{
+                "position": "Sales Representative",
+                "city": "Berlin",
+                "status": "normal"
+            },
+            {
+                "position": "Sales Representative",
+                "city": "Frankfurt",
+                "status": "critical"
+            }]
+        },
+        {
+            "position": "Sales Lead",
+            "country": "Italy",
+            "status": "normal",
+            "reportees": [{
+                "position": "Sales Representative",
+                "city": "Milan",
+                "status": "normal"
+            }]
+        }]
+    }]
+}
+
