@@ -4,7 +4,7 @@ A technical assessment by Xactly on creating a reusable component for organizati
 
 ## Diagrams
 <img src="diagrams/mockup.jpg">
-<img src="diagrams/component-hierarchy.jpg">
+<img src="diagrams/component-hierarchy.png">
 
 ## Technologies Used
 - React 
