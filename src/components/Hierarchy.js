@@ -7,22 +7,22 @@ export default function Hierarchy() {
     const vpRole = new Position(hierarchyData.position, hierarchyData.status, null, hierarchyData.reportees);
     
     return (
-        <>
+        <div className="container mb-5">
             <Role position={ vpRole } />
-            { vpRole.reportees.map((managers, i) => {
-                const managerRole = new Position(managers.position, managers.status, managers.region, managers.reportees);
+            { vpRole.reportees.map((manager, i) => {
+                const managerRole = new Position(manager.position, manager.status, manager.region, manager.reportees);
                 return (
-                    <div key={i}>
+                    <div key={i} className="indent">
                         <Role position={ managerRole } />
-                        { managerRole.reportees.map((leads, j) => {
-                            const leadRole = new Position(leads.position, leads.status, leads.country, leads.reportees);
+                        { managerRole.reportees.map((lead, j) => {
+                            const leadRole = new Position(lead.position, lead.status, lead.country, lead.reportees);
                             return (
-                                <div key={j}>
+                                <div key={j} className="indent">
                                     <Role position={ leadRole } />
-                                    { leadRole.reportees.map((representatives, k) => {
-                                        const representativeRole = new Position(representatives.position, representatives.status, representatives.city);
+                                    { leadRole.reportees.map((representative, k) => {
+                                        const representativeRole = new Position(representative.position, representative.status, representative.city);
                                         return (
-                                            <div key={k}>
+                                            <div key={k} className="indent">
                                                 <Role position={ representativeRole } />
                                             </div>
                                         )
@@ -33,6 +33,6 @@ export default function Hierarchy() {
                     </div>
                 )
             }) }
-        </>
+        </div>
     )
 }

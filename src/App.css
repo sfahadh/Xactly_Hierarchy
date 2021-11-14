@@ -1,4 +1,8 @@
 .App-header {
-  font-size: calc(10px + 2vmin);
-  text-align: center;
+  	font-size: calc(10px + 2vmin);
+  	text-align: center;
+}
+
+.indent {
+  	margin-left: 75px;
 }
